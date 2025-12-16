@@ -11,26 +11,75 @@
 		/>
 
 		<title>Frontend Mentor | Fylo data storage component</title>
-
-		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-		<style>
-			.attribution {
-				font-size: 11px;
-				text-align: center;
-			}
-			.attribution a {
-				color: hsl(228, 45%, 44%);
-			}
-		</style>
+		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		You’ve used 815 GB of your storage 185 GB Left 0 GB 1000 GB
+		<div class="wrapper">
+			<main>
+				<section class="tool-box">
+					<h1 class="visually-hidden">Fylo Data Storage</h1>
+					<img
+						src="./images/logo.svg"
+						alt="Logo Fylo Data Storage"
+						class="logo"
+					/>
+					<ul class="tool-list" role="toolbar">
+						<li>
+							<button class="btn primary-btn">
+								<img
+									src="./images/icon-document.svg"
+									alt="create new document"
+								/>
+							</button>
+						</li>
+						<li>
+							<button class="btn primary-btn">
+								<img src="./images/icon-folder.svg" alt="create new folder" />
+							</button>
+						</li>
+						<li>
+							<button class="btn primary-btn">
+								<img src="./images/icon-upload.svg" alt="upload file" />
+							</button>
+						</li>
+					</ul>
+				</section>
 
-		<footer class="attribution">
-			Challenge by
-			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-				>Frontend Mentor</a
-			>. Coded by <a href="#">Your Name Here</a>.
-		</footer>
+				<section class="storage-box">
+					<p class="text-align-center">
+						You’ve used <strong>815 GB</strong> of your storage
+					</p>
+					<!-- progress bar -->
+					<div
+						class="progress-bar-wrapper"
+						role="progressbar"
+						aria-valuemin="0"
+						aria-valuemax="1000"
+						aria-valuenow="815"
+						aria-label="Storage usage"
+					>
+						<div class="progress-bar">
+							<div class="progress-dot"></div>
+						</div>
+					</div>
+
+					<div class="progress-border">
+						<p>0 GB</p>
+						<p>1000 GB</p>
+					</div>
+					<!-- pop up with indicator -->
+					<div class="storage-indicator" aria-live="polite">
+						<p>185 <span>gb left</span></p>
+					</div>
+				</section>
+			</main>
+
+			<footer class="attribution">
+				Challenge by
+				<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+					>Frontend Mentor</a
+				>. Coded by <a href="#">Katrien S.</a>.
+			</footer>
+		</div>
 	</body>
 </html>
