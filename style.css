@@ -164,8 +164,7 @@ select {
 
 .wrapper {
 	margin-inline: auto;
-	width: 34rem;
-	max-width: calc(100% - 2rem);
+	width: min(calc(100% - 2rem), 56rem);
 }
 
 .visually-hidden {
