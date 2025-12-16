@@ -164,7 +164,7 @@ select {
 
 .wrapper {
 	margin-inline: auto;
-	min-width: calc(100% - 2rem);
+	width: calc(100% - 2rem);
 	max-width: 34rem;
 }
 
